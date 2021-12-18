@@ -9,7 +9,7 @@ Bootstrap(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def get():
-    queries = list(tokenizer.parse_query())
+    queries = []
     if request.method == 'POST':
         query = request.form.get('query')
         choice = request.form['flexRadioDefault']
