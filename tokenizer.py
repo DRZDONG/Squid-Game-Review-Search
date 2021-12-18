@@ -130,11 +130,3 @@ def token_document():
     inverted_list = parse_csv(stop_words)
     return inverted_list
 
-
-def parse_query():
-    root = ET.parse('cfquery.xml').getroot()
-    queries = set()
-    for query in root.findall('QUERY'):
-        text = str(query.findall('QueryText')[0].text)
-        queries.add(text)
-    return queries
